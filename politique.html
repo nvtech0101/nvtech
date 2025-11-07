@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Politique de Confidentialité - NvTech</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Politique de confidentialité, protection des données, RGPD, NvTech" name="keywords">
+    <meta content="Politique de confidentialité de NvTech - Comment nous protégeons vos données" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --dark: #212529;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+        }
+        
+        .navbar-brand h1 {
+            font-size: 1.8rem;
+        }
+        
+        .img-fluid2 {
+            max-height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .top-shape {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .top-shape:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -25px;
+            width: 50px;
+            height: 100%;
+            background: #ffffff;
+            transform: skewX(-20deg);
+        }
+        
+        .page-header {
+            background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('https://via.placeholder.com/1920x600') center/cover no-repeat;
+            padding: 100px 0 70px;
+            color: white;
+        }
+        
+        .privacy-content {
+            padding: 80px 0;
+        }
+        
+        .privacy-section {
+            margin-bottom: 50px;
+        }
+        
+        .privacy-section h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .data-table th, .data-table td {
+            border: 1px solid #dee2e6;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .data-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            display: none;
+        }
+        
+        .footer-links a {
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary) !important;
+        }
+        
+        .privacy-nav {
+            position: sticky;
+            top: 20px;
+        }
+        
+        .privacy-nav .nav-link {
+            color: var(--dark);
+            padding: 8px 15px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .privacy-nav .nav-link:hover, .privacy-nav .nav-link.active {
+            color: var(--primary);
+            border-left: 3px solid var(--primary);
+            background-color: rgba(13, 110, 253, 0.05);
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .privacy-content {
+                padding: 50px 0;
+            }
+            
+            .privacy-nav {
+                position: static;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-secondary ps-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <!-- Empty for alignment -->
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                    <div class="me-3 pe-3 border-end py-2">
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>contact@nvtech.ma</p>
+                    </div>
+                    <div class="py-2">
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+212 604401677</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0 text-uppercase text-primary"><img class="img-fluid2" src="img/11.png" alt="NvTech Logo">NvTech</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 me-n3">
+                <a href="index.html" class="nav-item nav-link">Accueil</a>
+                <a href="index.html#services" class="nav-item nav-link">Services</a>
+                <a href="index.html#about" class="nav-item nav-link">À Propos</a>
+                <a href="index.html#contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 200px">
+                <h1 class="display-4 text-white text-uppercase">Politique de Confidentialité</h1>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Accueil</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Politique de Confidentialité</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Privacy Content Start -->
+    <div class="container-fluid privacy-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="privacy-nav bg-light p-4 rounded">
+                        <h5 class="mb-3">Navigation</h5>
+                        <nav class="nav flex-column">
+                            <a class="nav-link active" href="#introduction">Introduction</a>
+                            <a class="nav-link" href="#collecte">Collecte des données</a>
+                            <a class="nav-link" href="#utilisation">Utilisation des données</a>
+                            <a class="nav-link" href="#protection">Protection des données</a>
+                            <a class="nav-link" href="#droits">Vos droits</a>
+                            <a class="nav-link" href="#cookies">Cookies</a>
+                            <a class="nav-link" href="#modifications">Modifications</a>
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="privacy-section" id="introduction">
+                        <h2>Introduction</h2>
+                        <p>Chez NvTech, nous accordons une importance primordiale à la protection de vos données personnelles et au respect de votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos informations lorsque vous utilisez nos services ou visitez notre site web.</p>
+                        <p>Nous nous engageons à respecter la législation marocaine en vigueur relative à la protection des données personnelles, notamment la loi 09-08, ainsi que les principes du Règlement Général sur la Protection des Données (RGPD) de l'Union européenne.</p>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Dernière mise à jour :</strong> 1 janvier 2024</p>
+                            <p><strong>Entrée en vigueur :</strong> 1 janvier 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="collecte">
+                        <h3>1. Données que nous collectons</h3>
+                        <p>Nous collectons différentes catégories de données personnelles dans le cadre de nos activités :</p>
+                        
+                        <h5 class="mt-4">Données fournies directement</h5>
+                        <p>Lorsque vous :</p>
+                        <ul>
+                            <li>Contactez notre service client</li>
+                            <li>Souscrivez à nos services</li>
+                            <li>Remplissez un formulaire sur notre site</li>
+                            <li>Participez à une enquête ou un concours</li>
+                        </ul>
+                        <p>Nous pouvons collecter :</p>
+                        <ul>
+                            <li>Nom et prénom</li>
+                            <li>Adresse email</li>
+                            <li>Numéro de téléphone</li>
+                            <li>Nom de l'entreprise</li>
+                            <li>Adresse postale</li>
+                            <li>Informations de facturation</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Données collectées automatiquement</h5>
+                        <p>Lors de votre visite sur notre site web, nous collectons :</p>
+                        <ul>
+                            <li>Adresse IP</li>
+                            <li>Type de navigateur et version</li>
+                            <li>Pages visitées et durée de visite</li>
+                            <li>Données de navigation et préférences</li>
+                            <li>Données de localisation approximative</li>
+                        </ul>
+                    </div>
+
+                    <div class="privacy-section" id="utilisation">
+                        <h3>2. Utilisation de vos données</h3>
+                        <p>Nous utilisons vos données personnelles pour les finalités suivantes :</p>
+                        
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Finalité</th>
+                                    <th>Base légale</th>
+                                    <th>Données concernées</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fourniture de nos services</td>
+                                    <td>Exécution du contrat</td>
+                                    <td>Coordonnées, informations de facturation</td>
+                                </tr>
+                                <tr>
+                                    <td>Support client</td>
+                                    <td>Intérêt légitime</td>
+                                    <td>Coordonnées, historique des demandes</td>
+                                </tr>
+                                <tr>
+                                    <td>Marketing et communication</td>
+                                    <td>Consentement</td>
+                                    <td>Coordonnées, préférences</td>
+                                </tr>
+                                <tr>
+                                    <td>Amélioration de nos services</td>
+                                    <td>Intérêt légitime</td>
+                                    <td>Données d'utilisation, feedback</td>
+                                </tr>
+                                <tr>
+                                    <td>Conformité légale</td>
+                                    <td>Obligation légale</td>
+                                    <td>Données de facturation, coordonnées</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Note importante :</strong> Nous ne vendons jamais vos données personnelles à des tiers. Nous ne les partageons qu'avec des partenaires de confiance dans le cadre strict de la fourniture de nos services.</p>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="protection">
+                        <h3>3. Protection de vos données</h3>
+                        <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, modification, divulgation ou destruction.</p>
+                        
+                        <h5 class="mt-4">Mesures de sécurité</h5>
+                        <ul>
+                            <li><strong>Chiffrement :</strong> Utilisation de protocoles SSL/TLS pour sécuriser les transmissions</li>
+                            <li><strong>Contrôle d'accès :</strong> Accès restreint aux données selon le principe du besoin d'en connaître</li>
+                            <li><strong>Sauvegardes :</strong> Sauvegardes régulières et sécurisées de vos données</li>
+                            <li><strong>Formation :</strong> Formation de notre personnel aux bonnes pratiques de sécurité</li>
+                            <li><strong>Audits :</strong> Audits réguliers de nos systèmes de sécurité</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Conservation des données</h5>
+                        <p>Nous conservons vos données personnelles uniquement pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées, conformément aux obligations légales :</p>
+                        <ul>
+                            <li>Données de clients actifs : Durée de la relation contractuelle + 3 ans</li>
+                            <li>Données de prospects : 3 ans à partir du dernier contact</li>
+                            <li>Données de facturation : 10 ans (obligation légale)</li>
+                            <li>Données de navigation : 13 mois maximum</li>
+                        </ul>
+                    </div>
+
+                    <div class="privacy-section" id="droits">
+                        <h3>4. Vos droits</h3>
+                        <p>Conformément à la législation sur la protection des données, vous disposez des droits suivants :</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary"><i class="fas fa-eye me-2"></i>Droit d'accès</h5>
+                                        <p class="card-text">Vous pouvez demander l'accès aux données personnelles que nous détenons sur vous.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary"><i class="fas fa-edit me-2"></i>Droit de rectification</h5>
+                                        <p class="card-text">Vous pouvez demander la correction de données inexactes ou incomplètes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary"><i class="fas fa-trash-alt me-2"></i>Droit à l'effacement</h5>
+                                        <p class="card-text">Vous pouvez demander la suppression de vos données dans certains cas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary"><i class="fas fa-ban me-2"></i>Droit d'opposition</h5>
+                                        <p class="card-text">Vous pouvez vous opposer au traitement de vos données pour le marketing.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary"><i class="fas fa-download me-2"></i>Droit à la portabilité</h5>
+                                        <p class="card-text">Vous pouvez recevoir vos données dans un format structuré et lisible.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary"><i class="fas fa-pause me-2"></i>Droit à la limitation</h5>
+                                        <p class="card-text">Vous pouvez demander la limitation du traitement dans certains cas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-box mt-4">
+                            <p><strong>Comment exercer vos droits :</strong> Pour exercer vos droits, veuillez nous contacter à l'adresse email <strong>contact@nvtech.ma</strong> ou utiliser le formulaire de contact sur notre site. Nous répondrons à votre demande dans un délai d'un mois.</p>
+                        </div>
+                    </div>
+
+                    <div class="privacy-section" id="cookies">
+                        <h3>5. Cookies et technologies similaires</h3>
+                        <p>Notre site web utilise des cookies pour améliorer votre expérience de navigation.</p>
+                        
+                        <h5 class="mt-4">Types de cookies utilisés</h5>
+                        <ul>
+                            <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site</li>
+                            <li><strong>Cookies de performance :</strong> Pour analyser l'utilisation du site</li>
+                            <li><strong>Cookies de fonctionnalité :</strong> Pour mémoriser vos préférences</li>
+                            <li><strong>Cookies de ciblage :</strong> Pour personnaliser le contenu</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Gestion des cookies</h5>
+                        <p>Vous pouvez contrôler et/ou supprimer les cookies comme vous le souhaitez. Vous pouvez supprimer tous les cookies déjà stockés sur votre ordinateur et configurer la plupart des navigateurs pour empêcher leur installation.</p>
+                        <p>Lors de votre première visite sur notre site, un bandeau d'information vous permet de personnaliser vos préférences en matière de cookies.</p>
+                    </div>
+
+                    <div class="privacy-section" id="modifications">
+                        <h3>6. Modifications de la politique</h3>
+                        <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment pour nous adapter aux évolutions légales, réglementaires ou techniques.</p>
+                        <p>Toute modification substantielle sera portée à votre connaissance par :</p>
+                        <ul>
+                            <li>Un avis sur notre site web</li>
+                            <li>Une notification par email (pour nos clients)</li>
+                            <li>Un bandeau d'information sur notre site</li>
+                        </ul>
+                        <p>Nous vous encourageons à consulter régulièrement cette page pour prendre connaissance des éventuelles modifications.</p>
+                    </div>
+
+                    <div class="privacy-section" id="contact">
+                        <h3>7. Contact</h3>
+                        <p>Pour toute question concernant cette politique de confidentialité ou pour exercer vos droits, vous pouvez nous contacter :</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-start mb-3">
+                                    <i class="fas fa-envelope text-primary me-3 mt-1"></i>
+                                    <div>
+                                        <h5>Email</h5>
+                                        <p class="mb-0">contact@nvtech.ma</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-start mb-3">
+                                    <i class="fas fa-phone text-primary me-3 mt-1"></i>
+                                    <div>
+                                        <h5>Téléphone</h5>
+                                        <p class="mb-0">+212 604401677</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-start mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary me-3 mt-1"></i>
+                                    <div>
+                                        <h5>Adresse</h5>
+                                        <p class="mb-0">NvTech<br>Agadir, Maroc</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-start mb-3">
+                                    <i class="fas fa-user-tie text-primary me-3 mt-1"></i>
+                                    <div>
+                                        <h5>Délégué à la protection des données</h5>
+                                        <p class="mb-0">Notre équipe dédiée à la protection des données</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-warning mt-4">
+                            <h5><i class="fas fa-exclamation-triangle me-2"></i>Réclamation</h5>
+                            <p class="mb-0">Si vous estimez que nous ne respectons pas cette politique de confidentialité ou la législation sur la protection des données, vous avez le droit d'introduire une réclamation auprès de l'autorité de contrôle compétente, la Commission Nationale de contrôle de la protection des Données à Caractère Personnel (CNDP) au Maroc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Privacy Content End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-secondary p-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Liens Rapides</h3>
+                <div class="d-flex flex-column justify-content-start footer-links">
+                    <a class="text-secondary mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                    <a class="text-secondary mb-2" href="index.html#about"><i class="bi bi-arrow-right text-primary me-2"></i>À Propos</a>
+                    <a class="text-secondary mb-2" href="index.html#services"><i class="bi bi-arrow-right text-primary me-2"></i>Nos Services</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Informations Légales</h3>
+                <div class="d-flex flex-column justify-content-start footer-links">
+                    <a class="text-secondary mb-2" href="politique.html"><i class="bi bi-arrow-right text-primary me-2"></i>Politique de Confidentialité</a>
+                    <a class="text-secondary mb-2" href="condition.html"><i class="bi bi-arrow-right text-primary me-2"></i>Conditions d'Utilisation</a>
+                    <a class="text-secondary mb-2" href="mentions-legales.html"><i class="bi bi-arrow-right text-primary me-2"></i>Mentions Légales</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Contactez-nous</h3>
+                <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Agadir, Maroc</p>
+                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>contact@nvtech.ma</p>
+                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+212 604401677</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Suivez-nous</h3>
+                <div class="d-flex">
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="index.html">NvTech</a>. Tous droits réservés.</p>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Back to top button
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('.back-to-top').fadeIn();
+                } else {
+                    $('.back-to-top').fadeOut();
+                }
+            });
+            
+            $('.back-to-top').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+            
+            // Smooth scrolling for anchor links
+            $('a[href*="#"]').on('click', function(e) {
+                e.preventDefault();
+                
+                $('html, body').animate(
+                    {
+                        scrollTop: $($(this).attr('href')).offset().top - 80,
+                    },
+                    500,
+                    'linear'
+                );
+            });
+            
+            // Update active nav link on scroll
+            $(window).on('scroll', function() {
+                var scrollPos = $(document).scrollTop() + 100;
+                $('.privacy-nav .nav-link').each(function() {
+                    var currLink = $(this);
+                    var refElement = $(currLink.attr('href'));
+                    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                        $('.privacy-nav .nav-link').removeClass('active');
+                        currLink.addClass('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

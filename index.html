@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>NvTech - Solutions IT & Infrastructure</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Solutions IT, Infrastructure réseau, Sécurité, IoT, Cloud Computing" name="keywords">
+    <meta content="NvTech - Votre partenaire informatique pour tous les secteurs d'activité" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --dark: #212529;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+        }
+        
+        .navbar-brand h1 {
+            font-size: 1.8rem;
+        }
+        
+        .img-fluid2 {
+            max-height: 50px;
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .img-card {
+            max-height: 150px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+        
+        .carousel-item img {
+            height: 600px;
+            object-fit: cover;
+        }
+        
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .service-item {
+            padding: 30px 20px;
+            height: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .top-shape {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .top-shape:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -25px;
+            width: 50px;
+            height: 100%;
+            background: #ffffff;
+            transform: skewX(-20deg);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            display: none;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Enhanced Arrow Animations */
+        .arrow-animation {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .bi-arrow-right {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Footer arrow animations */
+        .footer-links a {
+            text-decoration: none;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary) !important;
+        }
+        
+        .footer-links a:hover .bi-arrow-right {
+            transform: translateX(5px);
+            color: var(--primary);
+        }
+        
+        /* Navbar arrow animations */
+        .navbar-nav .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* Button arrow animations */
+        .btn-arrow {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-arrow:hover {
+            padding-right: 2.5rem;
+        }
+        
+        .btn-arrow::after {
+            content: '→';
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-arrow:hover::after {
+            opacity: 1;
+            right: 1.5rem;
+        }
+        
+        /* Carousel arrow animations */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+        
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .carousel-control-prev:hover .carousel-control-prev-icon {
+            transform: translateX(-3px);
+        }
+        
+        .carousel-control-next:hover .carousel-control-next-icon {
+            transform: translateX(3px);
+        }
+        
+        /* Smooth fade-in animations for sections */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Enhanced service items */
+        .service-item {
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-item:hover {
+            border-color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 400px;
+            }
+            
+            .carousel-caption {
+                padding: 15px;
+            }
+            
+            .carousel-caption h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-secondary ps-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <!-- Empty for alignment -->
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                    <div class="me-3 pe-3 border-end py-2">
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>contact@nvtech.ma</p>
+                    </div>
+                    <div class="py-2">
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+212 604401677</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0">
+            <h1 class="m-0 text-uppercase text-primary"><img class="img-fluid2" src="img/11.png" alt="NvTech Logo">NvTech</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 me-n3">
+                <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                <a href="#services" class="nav-item nav-link">Services</a>
+                <a href="#about" class="nav-item nav-link">À Propos</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/11.jpg" alt="Infrastructure réseau">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 text-white mb-md-4">Les spécialistes de l'infrastructure réseau</h1>
+                            <h5 class="text-white text-uppercase">Qu'il s'agisse d'une nouvelle installation de câblage de données ou d'une réparation d'urgence 24h/24 et 7j/7 de votre infrastructure réseau existante, nous avons l'expertise dont vous avez besoin.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/cctv1.jpg" alt="Vidéosurveillance CCTV">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 text-white mb-md-4">Vidéosurveillance CCTV</h1>
+                            <h5 class="text-white text-uppercase">Protégez votre entreprise contre le vol, le vandalisme et les intrus grâce à nos systèmes complets de vidéosurveillance et de vidéosurveillance.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/pexels-jakubzerdzicki-21782970.jpg" alt="Systèmes de Protection Incendie">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 text-white mb-md-4">Systèmes de Protection Incendie</h1>
+                            <h5 class="text-white text-uppercase">Protégez vos biens et vos proches avec notre service d'installation de systèmes d'incendie. Détection rapide, alarme efficace et conformité aux normes pour une sécurité optimale</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/RI2.png" alt="Maintenance et Réparation Informatique">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 text-white mb-md-4">Maintenance & Réparation Informatique</h1>
+                            <h5 class="text-white text-uppercase">Services complets de maintenance et réparation pour tous vos équipements informatiques.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/pexels-jakubzerdzicki-21782970.jpg" alt="Services Logiciels & Systèmes">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 text-white mb-md-4">Services Logiciels & Systèmes</h1>
+                            <h5 class="text-white text-uppercase">Solutions logicielles sur mesure pour optimiser vos processus métier et améliorer votre productivité.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid bg-secondary p-0 fade-in-section" id="about">
+        <div class="row g-0">
+            <div class="col-lg-6 py-6 px-5">
+                <h1 class="display-5 mb-4">Bienvenue chez <span class="text-primary">NvTech</span></h1>
+                <h4 class="text-primary mb-4">VOTRE PARTENAIRE INFORMATIQUE POUR TOUS LES SECTEURS D'ACTIVITÉ</h4>
+                <p class="mb-4">Faites équipe avec nous pour des services informatiques sur mesure, adaptés aux besoins des entreprises, administrations, hôtels et exploitations agricoles. Nos solutions connectées optimisent votre gestion, renforcent votre sécurité et améliorent votre performance.</p>
+                <a href="#contact" class="btn btn-primary py-md-3 px-md-5 rounded-pill btn-arrow">CONTACTEZ-NOUS</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
+                    <div class="d-flex text-white mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-user-tie fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>RÉDUIRE LES COÛTS</h3>
+                            <p class="mb-0">Bénéficiez d'une tarification simple et équitable, avec un accord de niveau de service garanti. Nos solutions optimisées permettent de réduire vos dépenses informatiques tout en maintenant une haute qualité de service.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-chart-line fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>AUGMENTER LA PRODUCTIVITÉ</h3>
+                            <p class="mb-0">Équipez vos employés des bons outils pour améliorer leur productivité. Une meilleure efficacité interne se traduit par une augmentation des revenus et des bénéfices pour votre entreprise.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-balance-scale fs-4"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>OPTIMISATION DE LA GESTION</h3>
+                            <p class="mb-0">Grâce à nos solutions connectées, bénéficiez d'une gestion fluide et centralisée de vos opérations. Vous pourrez suivre vos données en temps réel et prendre des décisions plus éclairées pour booster la performance de votre organisation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    
+    <!-- Services Start -->
+    <div class="container-fluid pt-6 px-5 fade-in-section" id="services">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">NOS SERVICES CLÉS</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <img class="img-fluid img-card" src="img/rj45.jpg" alt="Infrastructure & Réseau Informatique">
+                    <h3 class="mb-3">Infrastructure & Réseau Informatique</h3>
+                    <p class="mb-0">Conception, déploiement et gestion d'infrastructures réseau performantes et sécurisées adaptées à vos besoins.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <img class="img-fluid img-card" src="img/sec.jpg" alt="Systèmes de Protection & Sécurité">
+                    <h3 class="mb-3">Systèmes de Protection & Sécurité</h3>
+                    <p class="mb-0">Solutions avancées pour la cybersécurité, la vidéosurveillance et le contrôle d'accès afin de protéger vos données et vos locaux.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <img class="img-fluid img-card" src="img/iot.avif" alt="IoT et Automatisation Technique">
+                    <h3 class="mb-3">IoT et Automatisation Technique</h3>
+                    <p class="mb-0">Intégration d'objets connectés et de systèmes intelligents pour optimiser vos processus et améliorer votre efficacité.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <img class="img-fluid img-card" src="img/cloud.avif" alt="Cloud Computing">
+                    <h3 class="mb-3">Cloud Computing</h3>
+                    <p class="mb-0">Mise en place de solutions cloud évolutives pour le stockage, l'hébergement et la gestion de vos applications en toute sécurité.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <img class="img-fluid img-card" src="img/digital.jpg" alt="Innovation & Solutions Digitales">
+                    <h3 class="mb-3">Innovation & Solutions Digitales</h3>
+                    <p class="mb-0">Développement de solutions numériques innovantes pour booster votre transformation digitale et améliorer votre compétitivité</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <img class="img-fluid img-card" src="img/monitor.avif" alt="Supervision & Télegestion">
+                    <h3 class="mb-3">Supervision & Télegestion</h3>
+                    <p class="mb-0">Surveillez et gérez vos infrastructures à distance avec nos solutions de supervision et télégestion. Optimisez la performance, anticipez les anomalies et assurez une gestion efficace en temps réel.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- Features Start -->
+    <div class="container-fluid py-6 px-5 fade-in-section">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">Pourquoi choisir NvTech ?</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-cubes fs-4 text-white"></i>
+                        </div>
+                        <h3>Spécialistes de l'infrastructure réseau</h3>
+                        <p class="mb-0">Nous fournissons des solutions pour une connectivité fiable qui garantit les meilleures performances de votre réseau.</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-percent fs-4 text-white"></i>
+                        </div>
+                        <h3>Solutions critiques</h3>
+                        <p class="mb-0">Nous sommes spécialisés dans les environnements où la structure réseau a un coût de défaillance élevé et doit fonctionner dans des conditions difficiles.</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-award fs-4 text-white"></i>
+                        </div>
+                        <h3>Des solutions rentables pour tous les budgets</h3>
+                        <p class="mb-0">Les services informatiques gérés peuvent être coûteux, c'est pourquoi nous proposons des services rentables pour tous les budgets.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-block bg-primary h-100 text-center">
+                    <img class="img-fluid" src="img/feature.jpg" alt="Pourquoi choisir NvTech">
+                    <div class="p-4">
+                        <p class="text-white mb-4">Nous offrons des solutions innovantes, adaptées à vos besoins, avec un engagement fort en matière de qualité, de sécurité et de performance. Grâce à notre expertise et notre approche sur mesure, nous vous accompagnons dans l'optimisation et la transformation de vos infrastructures, en garantissant fiabilité et satisfaction.</p>
+                        <a href="#contact" class="btn btn-light py-md-3 px-md-5 rounded-pill mb-2 btn-arrow">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row g-5">
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="far fa-smile-beam fs-4 text-white"></i>
+                        </div>
+                        <h3>Intervention d'urgence 24h/24 et 7j/7</h3>
+                        <p class="mb-0">Nos ingénieurs et techniciens spécialisés seront sur place dans les 24 heures pour trouver les pannes, diagnostiquer et rétablir la connectivité.</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-user-tie fs-4 text-white"></i>
+                        </div>
+                        <h3>Expertise technique pointue</h3>
+                        <p class="mb-0">Notre équipe travaille en étroite collaboration avec vous pour identifier les solutions les plus efficaces pour répondre aux besoins informatiques de votre organisation.</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-headset fs-4 text-white"></i>
+                        </div>
+                        <h3>Support client 24h/24 et 7j/7</h3>
+                        <p class="mb-0">Notre équipe de support est disponible à tout moment pour répondre à vos questions et résoudre vos problèmes techniques rapidement et efficacement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-secondary p-5 fade-in-section" id="contact">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Liens Rapides</h3>
+                <div class="d-flex flex-column justify-content-start footer-links">
+                    <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                    <a class="text-secondary mb-2" href="#about"><i class="bi bi-arrow-right text-primary me-2"></i>À Propos</a>
+                    <a class="text-secondary mb-2" href="#services"><i class="bi bi-arrow-right text-primary me-2"></i>Nos Services</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Liens Utiles</h3>
+                <div class="d-flex flex-column justify-content-start footer-links">
+                    <a class="text-secondary mb-2" href="politique.html"><i class="bi bi-arrow-right text-primary me-2"></i>Politique de confidentialité</a>
+                    <a class="text-secondary mb-2" href="condition.html"><i class="bi bi-arrow-right text-primary me-2"></i>Conditions d'utilisation</a>
+                    <a class="text-secondary mb-2" href="legal.html"><i class="bi bi-arrow-right text-primary me-2"></i>Mentions Légales</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Contactez-nous</h3>
+                <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Agadir, Maroc</p>
+                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>contact@nvtech.ma</p>
+                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+212 604401677</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4">Suivez-nous</h3>
+                <div class="d-flex">
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-secondary text-center border-top py-4 px-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <p class="m-0">&copy; <a class="text-secondary border-bottom" href="#">NvTech</a>. Tous droits réservés.</p>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Back to top button
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('.back-to-top').fadeIn();
+                } else {
+                    $('.back-to-top').fadeOut();
+                }
+            });
+            
+            $('.back-to-top').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+            
+
+            
+            // Navbar active state
+            $(window).on('scroll', function() {
+                var scrollPos = $(document).scrollTop() + 100;
+                $('.navbar-nav .nav-link').each(function() {
+                    var currLink = $(this);
+                    var refElement = $(currLink.attr('href'));
+                    if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                        $('.navbar-nav .nav-link').removeClass('active');
+                        currLink.addClass('active');
+                    }
+                });
+            });
+            
+            // Fade in sections on scroll
+            const fadeInSections = document.querySelectorAll('.fade-in-section');
+            
+            const fadeInObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeInSections.forEach(section => {
+                fadeInObserver.observe(section);
+            });
+            
+            // Enhanced carousel controls
+            $('.carousel').carousel({
+                interval: 5000,
+                pause: 'hover'
+            });
+        });
+    </script>
+</body>
+
+</html>
